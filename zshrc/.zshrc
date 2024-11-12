@@ -27,6 +27,10 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
 
+function connect {
+  ssh eric.najork@AMB-X7Q523.local -L 3004:localhost:3004 -L 3005:localhost:3005 -L 9229:localhost:9229 -L 9228:localhost:9228 -L 5432:localhost:5432 -L 3000:localhost:3000 -L 3006:localhost:3006 -L 62195:localhost:62195 -L 8082:localhost:8082 -L 8080:localhost:8080 -q
+}
+
 alias ssht='connect'
 alias cl='clear'
 alias ~sz='source ~/.zshrc'
@@ -43,8 +47,8 @@ alias vim="nvim"
 alias tn="tmux new -s"
 alias ta="tmux attach -d -t"
 alias tl="tmux ls"
-alias sshs="ssh -D 1080 -q -C -N eric.najork@AMB-X7Q523"
-alias sshfs="sshfs eric.najork@AMB-X7Q523:/Users/eric.najork /home/eric/work"
+alias sshs="ssh -D 1080 -q -C -N eric.najork@AMB-X7Q523.local"
+alias sshfs="sshfs eric.najork@AMB-X7Q523.local:/Users/eric.najork /home/eric/work"
 alias neofetch="fastfetch"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

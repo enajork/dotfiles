@@ -14,8 +14,8 @@ for_window [class="^.*"] border pixel 1
 # set $mod Mod4
 set $mod Mod1
 
-exec --no-startup-id picom
-exec --no-startup-id feh --bg-max ~/.config/backgrounds/coffee.png
+#exec --no-startup-id picom
+exec --no-startup-id feh --bg-fill ~/.config/backgrounds/lighthouse.png
 
 # kill any hanging polybar processes
 exec_always killall polybar
@@ -115,17 +115,19 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # monitors setup
-workspace 2 output rdp0
 workspace 1 output rdp1
-workspace 3 output rdp2
-workspace 4 output rdp0
-workspace 5 output rdp0
-workspace 6 output rdp0
-workspace 7 output rdp0
-workspace 8 output rdp0
-workspace 9 output rdp0
-workspace 0 output rdp0
+workspace 2 output rdp2
+workspace 3 output rdp0
+workspace 4 output rdp2
+workspace 5 output rdp2
+workspace 6 output rdp2
+workspace 7 output rdp2
+workspace 8 output rdp2
+workspace 9 output rdp2
+workspace 0 output rdp2
 
+# mouse warping
+mouse_warping output
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
