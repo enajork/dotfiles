@@ -114,20 +114,27 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+j move workspace to output down
+bindsym $mod+Control+k move workspace to output up
+bindsym $mod+Control+l move workspace to output right
+
+set $main_monitor rdp0
 # monitors setup
-workspace 1 output rdp1
-workspace 2 output rdp2
-workspace 3 output rdp0
-workspace 4 output rdp2
-workspace 5 output rdp2
-workspace 6 output rdp2
-workspace 7 output rdp2
-workspace 8 output rdp2
-workspace 9 output rdp2
-workspace 0 output rdp2
+workspace 1 output $main_monitor
+workspace 2 output $main_monitor
+workspace 3 output $main_monitor
+workspace 4 output $main_monitor
+workspace 5 output $main_monitor
+workspace 6 output $main_monitor
+workspace 7 output $main_monitor
+workspace 8 output $main_monitor
+workspace 9 output $main_monitor
+workspace 0 output $main_monitor
 
 # mouse warping
 mouse_warping output
+focus_follows_mouse no
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
