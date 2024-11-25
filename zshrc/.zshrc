@@ -9,6 +9,8 @@ fi
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 export ZSH="$HOME/.oh-my-zsh"
+export GTK_THEME="Adwaita:dark"
+export QT_STYLE_OVERRIDE=Adwaita-Dark
 
 ZSH_THEME="robbyrussell"
 
