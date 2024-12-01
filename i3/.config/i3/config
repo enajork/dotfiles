@@ -47,7 +47,8 @@ bindsym $mod+Return exec kitty
 bindsym $mod+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/drun.sh
+#bindsym $mod+d exec --no-startup-id rofi -show drun
 #bindsym $mod+space exec --no-startup-id rofi -show combi
 #bindsym $mod+Tab exec --no-startup-id rofi -show window
 
@@ -67,12 +68,10 @@ bindsym $mod+Shift+l move right
 bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-#bindsym $mod+Shift+space floating toggle
+bindsym $mod+s floating toggle
 
 # focus the parent container
 #bindsym $mod+a focus parent
@@ -154,10 +153,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -174,7 +173,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # gaps
-gaps inner 4
+gaps inner 6
 gaps outer 4
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -208,9 +207,9 @@ set $mantle    #181825
 set $crust     #11111b
 
 # target                 title     bg    text      indicator    border
-client.focused           $mantle   $mauve $mantle  $rosewater $mauve
-client.focused_inactive  $overlay0 $base  $text    $rosewater $overlay0
-client.unfocused         $overlay0 $base  $text    $rosewater $overlay0
+client.focused           $mantle   $mauve $mantle  $lavender $mauve
+client.focused_inactive  $overlay0 $base  $text    $lavender $overlay0
+client.unfocused         $overlay0 $base  $text    $lavender $overlay0
 client.urgent            $peach    $base  $peach   $overlay0  $peach
 client.placeholder       $overlay0 $base  $text    $overlay0  $overlay0
 client.background        $base
