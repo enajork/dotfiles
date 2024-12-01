@@ -51,7 +51,6 @@ alias tn="tmux new -s"
 alias ta="tmux attach -d -t"
 alias tl="tmux ls"
 alias sshs="ssh -D 1080 -q -C -N eric.najork@AMB-X7Q523.local"
-alias sshfs="sshfs eric.najork@AMB-X7Q523.local:/Users/eric.najork /home/eric/work"
 alias neofetch="fastfetch"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
