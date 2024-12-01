@@ -35,6 +35,7 @@ function connect {
 
 alias ssht='connect'
 alias cl='clear'
+alias dev='google-chrome-unstable --args --proxy-server="socks5://localhost:1080" > /dev/null 2>&1 &'
 alias ~sz='source ~/.zshrc'
 alias ~z='vim ~/.zshrc'
 alias gs='git status'
