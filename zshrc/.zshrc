@@ -52,6 +52,8 @@ alias ta="tmux attach -d -t"
 alias tl="tmux ls"
 alias sshs="ssh -D 1080 -q -C -N eric.najork@AMB-X7Q523.local"
 alias neofetch="fastfetch"
+alias mm="~/.config/i3/main_monitor.sh"
+alias copy="xclip -selection clipboard"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

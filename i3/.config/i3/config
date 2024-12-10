@@ -14,7 +14,7 @@ for_window [class="^.*"] border pixel 0
 set $mod Mod1
 
 exec --no-startup-id picom
-exec_always --no-startup-id feh --bg-fill ~/.config/backgrounds/cherry.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/backgrounds/kaiju.png
 
 # kill any hanging polybar processes
 exec_always killall polybar
@@ -105,7 +105,7 @@ bindsym $mod+Control+j move workspace to output down
 bindsym $mod+Control+k move workspace to output up
 bindsym $mod+Control+l move workspace to output right
 
-set $main_monitor rdp0
+set_from_resource $main_monitor i3wm.MAIN_MONITOR rdp1
 # monitors setup
 workspace 1 output $main_monitor
 workspace 2 output $main_monitor
