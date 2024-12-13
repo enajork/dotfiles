@@ -5,9 +5,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Automatically run startx on tty1
+if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
+#    exec startx
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+#export DISPLAY=:0
+export XDG_SESSION_TYPE="x11"
 export ZSH="$HOME/.oh-my-zsh"
 export GTK_THEME="Adwaita:dark"
 export QT_STYLE_OVERRIDE=Adwaita-Dark
@@ -50,6 +57,8 @@ alias vim="nvim"
 alias tn="tmux new -s"
 alias ta="tmux attach -d -t"
 alias tl="tmux ls"
+alias k="kill"
+alias ka="killall"
 alias sshs="ssh -D 1080 -q -C -N eric.najork@AMB-X7Q523.local"
 alias neofetch="fastfetch"
 alias mm="~/.config/i3/main_monitor.sh"

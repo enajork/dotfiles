@@ -29,6 +29,9 @@ font pango:MesloLGS Nerd Font Mono Bold 14
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# screenshot
+bindsym $mod+Shift+s exec maim | xclip -selection clipboard -t image/png
+
 # start a terminal
 bindsym $mod+Return exec kitty
 
@@ -60,7 +63,7 @@ bindsym $mod+Shift+f fullscreen toggle
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+s floating toggle
+bindsym $mod+Shift+t floating toggle
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
