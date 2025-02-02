@@ -7,7 +7,7 @@ fi
 
 # Automatically run startx on tty1
 if [[ -z $DISPLAY ]] && [[ $(tty) == /dev/tty1 ]]; then
-#    exec startx
+   #exec startx
 fi
 
 # If you come from bash you might have to change your $PATH.
