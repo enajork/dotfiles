@@ -36,7 +36,13 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # Set-up FZF key bindings (CTRL R for fuzzy history finder)
 source <(fzf --zsh)
 
+function connect {
+  ssh -p 9000 eric.najork@localhost -L 3004:localhost:3004 -L 3005:localhost:3005 -L 9229:localhost:9229 -L 9228:localhost:9228 -L 5432:localhost:5432 -L 3000:localhost:3000 -L 3006:localhost:3006 -L 62195:localhost:62195 -L 8082:localhost:8082 -L 8080:localhost:8080 -L 8531:localhost:8531 -q
+}
+
+alias ssht='connect'
 alias cl='clear'
+alias dev='google-chrome-unstable --args --proxy-server="socks5://localhost:1080" > /dev/null 2>&1 &'
 alias ~sz='source ~/.zshrc'
 alias ~z='vim ~/.zshrc'
 alias gs='git status'
@@ -53,6 +59,7 @@ alias ta="tmux attach -d -t"
 alias tl="tmux ls"
 alias k="kill"
 alias ka="killall"
+alias sshs="ssh -p 9000 -D 1080 -q -C -N eric.najork@localhost"
 alias neofetch="fastfetch"
 alias mm="~/.config/i3/main_monitor.sh"
 alias copy="xclip -selection clipboard"
