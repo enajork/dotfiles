@@ -37,7 +37,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 source <(fzf --zsh)
 
 function connect {
-  ssh eric.najork@AMB-X7Q523.local -L 3004:localhost:3004 -L 3005:localhost:3005 -L 9229:localhost:9229 -L 9228:localhost:9228 -L 5432:localhost:5432 -L 3000:localhost:3000 -L 3006:localhost:3006 -L 62195:localhost:62195 -L 8082:localhost:8082 -L 8080:localhost:8080 -q
+  ssh eric.najork@AMB-X7Q523.local -L 3004:localhost:3004 -L 3005:localhost:3005 -L 9229:localhost:9229 -L 9228:localhost:9228 -L 5432:localhost:5432 -L 3000:localhost:3000 -L 3006:localhost:3006 -L 62195:localhost:62195 -L 8082:localhost:8082 -L 8080:localhost:8080 -L 8531:localhost:8531 -q
 }
 
 alias ssht='connect'
